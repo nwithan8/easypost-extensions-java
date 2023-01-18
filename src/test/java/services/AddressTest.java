@@ -1,15 +1,15 @@
 package services;
 
 import com.easypost.exception.EasyPostException;
-import com.easypost.exception.General.MissingParameterError;
 import com.easypost.model.Address;
 import com.easypost.service.EasyPostClient;
+import dev.nwithan8.easypostextensions.parameters.Addresses;
 import lombok.experimental.ExtensionMethod;
 import org.junit.jupiter.api.Test;
 
-import com.easypost.EasyPost;
-
 import dev.nwithan8.easypostextensions.services.AddressService;
+
+import java.util.Map;
 
 @ExtensionMethod (AddressService.class)
 public final class AddressTest {
@@ -20,6 +20,13 @@ public final class AddressTest {
 
         com.easypost.service.AddressService addressService = client.address;
 
-        Address address = addressService.verify(new Address());
+        // Address address = addressService.verify(new Address());
+
+        Addresses.Create createParameters = new Addresses.Create();
+        createParameters.carrierFacility = "some-carrier-facility";
+
+        Map<String, Object> parameters = createParameters.toDictionary();
+
+        System.out.println(parameters);
     }
 }
