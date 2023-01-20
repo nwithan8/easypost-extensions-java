@@ -4,7 +4,7 @@
 
     <groupId>dev.nwithan8</groupId>
     <artifactId>easypost-extensions</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>EasyPost Extensions</name>
@@ -43,7 +43,7 @@
         <connection>scm:git:git@github.com:nwithan8/easypost-extensions-java.git</connection>
         <developerConnection>scm:git:git@github.com:nwithan8/easypost-extensions-java.git</developerConnection>
         <url>https://github.com/nwithan8/easypost-extensions-java.git</url>
-        <tag>easypost-extensions-0.1.0</tag>
+        <tag>@{project.version}</tag>
     </scm>
 
     <dependencies>
