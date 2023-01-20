@@ -21,7 +21,7 @@ public abstract class RequestParameters implements IRequestParameters {
         this.parametersDictionary = new HashMap<>();
     }
 
-    protected RequestParameters(Map<String, Object> overrideParameters) {
+    protected RequestParameters(@NotNull Map<String, Object> overrideParameters) {
         this.parametersDictionary = overrideParameters;
     }
 
